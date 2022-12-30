@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: thistle;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+}
+/*fix the overflow*/
+.pw-container {
+    
+    background-color: blueviolet;
+    box-shadow: 0 4px 10px black;
+    width: 400px;
+}
+
+.pw-header {
+    padding: 1rem;
+}
+
+.pw {
+    overflow: auto; 
+    background-color: rgb(122, 69, 171);
+    position: relative; 
+    display: flex;
+    font-size: 1.5rem;
+    padding: 1rem;
+    align-items: center;
+    height: 70px;
+    width: 100%
+    
+}
+
+.pw button {
+    background-color: rgb(126, 85, 164);
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    cursor: pointer;
+    font-weight: bold;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    transform: translateX(-50%, 50%);
+
+}
+
+.pw:hover button {
+    opacity: 1;
+}
+
+.pw-body {
+    padding: 0 1rem 1rem;
+}
+
+.form-control {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+
+.generate {
+    background-color: burlywood;
+    color:blueviolet;
+    display: block;
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    width: 100%;
+}
