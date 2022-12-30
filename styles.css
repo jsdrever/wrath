@@ -13,9 +13,9 @@ body,
 }
 .lol {
     position: fixed;
-    right: 7%;
+    right: 15%;
     top: -8px;
-    max-width: 50px;
+    max-width: 10px;
   }
 body {
   font-family: sans-serif;
