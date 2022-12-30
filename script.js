@@ -2,8 +2,8 @@
 //this variable targets generate id (password button)
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword() {
-    console.log("clicked it")
+//function generatePassword() {
+  //  console.log("clicked it")
 //need a generated password and return that variable
 // 1. prompt the user for the password criteria
 //   a. password length 8-128
@@ -15,8 +15,8 @@ function generatePassword() {
 
 
 
-    return "Generated Password will go here!"
-}
+  //  return "Generated Password will go here!"
+//}
 
 // Write password to the #password input
 function writePassword() {
@@ -28,7 +28,7 @@ function writePassword() {
 }
 
 // Add event listener to generate button an on click connects the generate btn variable and calls the writePassword function
-generateBtn.addEventListener("click", writePassword);
+
 
 
 
@@ -62,6 +62,7 @@ console.log(generatePassword(12, true, true, true, true));
 
 generatePassword();
 
+generateBtn.addEventListener("click", writePassword);
 //practice web dev simplified
 
 
