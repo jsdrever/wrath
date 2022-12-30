@@ -11,7 +11,12 @@ body,
   margin: 0;
   padding: 0;
 }
-
+.lol {
+    position: fixed;
+    right: 7%;
+    top: -8px;
+    max-width: 50px;
+  }
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
