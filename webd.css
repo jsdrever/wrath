@@ -61,6 +61,15 @@ label {
     border-radius: .5rem;
 }
 
+.skull {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 50px;
+    top: 50px;
+}
+
 .btn {
   grid-column: span 2;
   background-color: transparent;

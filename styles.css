@@ -20,6 +20,11 @@ body,
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
+  background-image: url('/wrath-photos/look-at-this.jpg');
+  background-size: cover;
+  background-position: center;
+   height: 300px;
+  width: 100%;
 }
 
 .wrapper {
@@ -45,6 +50,9 @@ header {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+  position: fixed;
+  top: 500px;
+  right: 150px;
 }
 
 .card-header::after {
@@ -122,6 +130,7 @@ button[disabled] {
   resize: none;
   overflow: hidden;
 }
+
 
 @media (max-width: 690px) {
   .btn {
