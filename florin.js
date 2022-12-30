@@ -289,3 +289,5 @@ copyEl.addEventListener("click", () => {
     textarea.remove();
     alert("Password copied to clipboard");
 });
+
+console.log(generatePassword);

@@ -75,3 +75,4 @@ function syncCharacterAmount(e) {
     characterAmountRange.value = value
 }
 
+console.log(generatePassword);
