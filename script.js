@@ -1,7 +1,7 @@
 // Assignment Code
 //this variable targets generate id (password button)
 var generateBtn = document.querySelector("#generate");
-
+generateBtn.addEventListener("click", writePassword);
 //function generatePassword() {
   //  console.log("clicked it")
 //need a generated password and return that variable
@@ -32,7 +32,10 @@ function writePassword() {
 
 
 
-//practice james quick
+//practice attempt 2
+// GENERATEBTN CLICK EVENT NOT RESPONDING
+// NEEDS PROMPTS FOR INPUT SELECTION
+// PASSWORD NOT BEING DISPLAYED IN BOX
 const numbers = [0,1,2,3,4,5,6,7,8,9];
 const symbols = ["!", "@", "#", "$", "%", "^", "&"]
 
@@ -40,7 +43,7 @@ const characterCodes = Array.from(Array(26)).map( (_, i) => i + 97);
 const lowercaseLetters = characterCodes.map(code => String.fromCharCode(code));
 const uppercaseLetters = lowercaseLetters.map(letter => letter.toUpperCase())
 
-const generatePassword = (lenght, hasNumbers, hasSymbols, hasLowercase, hasUppercase) =>{
+const generatePassword = (length, hasNumbers, hasSymbols, hasLowercase, hasUppercase) =>{
     const availableCharacters = [
         ...(hasSymbols ? symbols : []),
         ...(hasNumbers ? numbers : []),
@@ -51,7 +54,7 @@ const generatePassword = (lenght, hasNumbers, hasSymbols, hasLowercase, hasUpper
 
     if(availableCharacters.length === 0) return "";
 
-    for(let i = 0; i <lenght; i++){
+    for(let i = 0; i <length; i++){
         const randomIndex = Math.floor(Math.random() * availableCharacters.length);
         password+= availableCharacters[randomIndex];
     }
@@ -62,8 +65,8 @@ console.log(generatePassword(12, true, true, true, true));
 
 generatePassword();
 
-generateBtn.addEventListener("click", writePassword);
-//practice web dev simplified
+
+
 
 
 
