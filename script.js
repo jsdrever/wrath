@@ -4,13 +4,13 @@ var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
 //function generatePassword() {
   //  console.log("clicked it")
-//need a generated password and return that variable
+//todo need a generated password and return that variable
 // 1. prompt the user for the password criteria
-//   a. password length 8-128
+// !  a. password length 8-128 code unsuccessfull
 //   b. lowercase, upppercase, numbers, special characters
 // 2. validate the input ^ at least one type of character
 // 3. generate the password
-// 4. display password to the page
+// ! 4. display password to the page
 
 
 
@@ -24,7 +24,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+   
 }
 
 // Add event listener to generate button an on click connects the generate btn variable and calls the writePassword function
@@ -37,7 +37,7 @@ function writePassword() {
 // NEEDS PROMPTS FOR INPUT SELECTION
 // PASSWORD NOT BEING DISPLAYED IN BOX
 const numbers = [0,1,2,3,4,5,6,7,8,9];
-const symbols = ["!", "@", "#", "$", "%", "^", "&"]
+const symbols = "!@#$%^&*()[]{}=+></,.";
 
 const characterCodes = Array.from(Array(26)).map( (_, i) => i + 97);
 const lowercaseLetters = characterCodes.map(code => String.fromCharCode(code));
@@ -50,7 +50,46 @@ const generatePassword = (length, hasNumbers, hasSymbols, hasLowercase, hasUpper
         ...(hasUppercase ? uppercaseLetters : []),
         ...(hasLowercase ? lowercaseLetters : []),
     ];
-    let password = "";
+    
+    let newPassword = "";
+    function hasLowercase() {
+        return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+      }
+      function hasUppercase() {
+        return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+      }
+      function hasNumbers() {
+        return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+      }
+      function hasSymbols() {
+        const symbols = "!@#$%^&*()[]{}=+></,.";
+        return symbols[Math.floor(Math.random() * symbols.length)];
+      }
+    
+    
+    // if (confirm('Include capital letters?')) {
+    //     characterCodes.push(uppercaseLetters)
+    //   }
+    
+    //   if (confirm('Include lowercase letters?')) {
+    //     characterCodes.push(lowercaseLetters)
+    //   }
+      
+    //   if (confirm('Include numbers?')) {
+    //     characterCodes.push(numbers)
+    //   }
+     
+    //   if (confirm('Include symbols?')) {
+    //     characterCodes.push(symbols)
+    //     {
+    //         password.textContent = newPassword;
+    //     }
+    //   };
+        //! newPassword undefined...
+        //! how do i collect the resluts from the functions
+        //  todo make a prompt for selecting length. not sure how to set that up. it wont be a if(confirm('how many characters)) {
+        //     characterCodes.push(userInput)
+        // }
 
     if(availableCharacters.length === 0) return "";
 
@@ -59,11 +98,12 @@ const generatePassword = (length, hasNumbers, hasSymbols, hasLowercase, hasUpper
         password+= availableCharacters[randomIndex];
     }
     return password;
+    // ! What am i doing wrong here...
 }
+// the 10 value will need to be optional
+console.log(generatePassword(10, true, true, true));
 
-console.log(generatePassword(12, true, true, true, true));
-
-generatePassword();
+//! it's displaying in the password box now but also getting a [object HTMLTextAreaElement] then the digits
 
 
 
