@@ -22,7 +22,9 @@ generateBtn.addEventListener("click", writePassword);
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  //var newPassword
 
+  //passwordText.value = newPassword;
   passwordText.value = password;
    
 }
@@ -82,7 +84,8 @@ const generatePassword = (length, hasNumbers, hasSymbols, hasLowercase, hasUpper
     //   if (confirm('Include symbols?')) {
     //     characterCodes.push(symbols)
     //     {
-    //         password.textContent = newPassword;
+            // password.textContent = newPassword;
+             password.textContent = password;
     //     }
     //   };
         //! newPassword undefined...
@@ -101,7 +104,10 @@ const generatePassword = (length, hasNumbers, hasSymbols, hasLowercase, hasUpper
     // ! What am i doing wrong here...
 }
 // the 10 value will need to be optional
-console.log(generatePassword(10, true, true, true));
+// console.log(generatePassword(10, true, true, true));
+//writePassword();
+generatePassword(10, true, false, true);
+
 
 //! it's displaying in the password box now but also getting a [object HTMLTextAreaElement] then the digits
 //  https://tinyurl.com/BootCampTutorTeam bc i keep losing the email with this link. like seriously why does the bootcamp walk you through a method of scheduling with a tutor but then they don't accept that method and it's not written anywhere on the pages. you just need to find "that email" that has "that link" end of rant.
