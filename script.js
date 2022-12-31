@@ -104,7 +104,7 @@ const generatePassword = (length, hasNumbers, hasSymbols, hasLowercase, hasUpper
 console.log(generatePassword(10, true, true, true));
 
 //! it's displaying in the password box now but also getting a [object HTMLTextAreaElement] then the digits
-
+//  https://tinyurl.com/BootCampTutorTeam bc i keep losing the email with this link. like seriously why does the bootcamp walk you through a method of scheduling with a tutor but then they don't accept that method and it's not written anywhere on the pages. you just need to find "that email" that has "that link" end of rant.
 
 
 
