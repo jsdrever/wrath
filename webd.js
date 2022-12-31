@@ -20,6 +20,10 @@ const SYMBOLS_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(arrayFromLowToHigh(
 characterAmountNumber.addEventListener('input', syncCharacterAmount)
 characterAmountRange.addEventListener('input', syncCharacterAmount)
 
+// === true, == true, += true 
+// or maybe make new const's and use it to call the elements
+
+
 form.addEventListener('submit', e => {
     e.preventDefault()
     const characterAmount = characterAmountNumber.value
@@ -47,6 +51,7 @@ form.addEventListener('submit', e => {
     //     const x = generatePassword();
     //     password += x;
     // }
+    // todo none of this is working. try fixing the first checkboxes attempt.
     passwordDisplay.innerText = password;
 })
 
@@ -78,4 +83,4 @@ function syncCharacterAmount(e) {
     characterAmountRange.value = value
 }
 
-console.log(generatePassword);
+console.log(generatePassword(''));
