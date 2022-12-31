@@ -8,6 +8,9 @@ const includeSymbolsElement = document.getElementById('includeSymbols')
 const form = document.getElementById('passwordGeneratorForm')
 const passwordDisplay = document.getElementById('passwordDisplay')
 
+// function includeNumbersElement(
+
+// )
 
 const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90)
 const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
@@ -20,30 +23,30 @@ characterAmountRange.addEventListener('input', syncCharacterAmount)
 form.addEventListener('submit', e => {
     e.preventDefault()
     const characterAmount = characterAmountNumber.value
-    /*const includeUppercase = includeUppercaseElement.checked == true
+    const includeUppercase = includeUppercaseElement.checked == true
     const includeNumbers = includeNumbersElement.checked == true
     const includeSymbols = includeSymbolsElement.checked == true
-    const password = generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols) */
+    const password = generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols)
    
 
-    let password = "";
+    //let password = "";
 
-    if (includeUppercaseElement.checked) {
-        password += includeUppercase();
-    }
+    // if (includeUppercaseElement.checked) {
+    //     password += includeUppercase();
+    // }
 
-    if (includeNumbersElement.checked) {
-        password += includeNumber();
-    }
+    // if (includeNumbersElement.checked) {
+    //     password += includeNumbers();
+    // }
 
-    if (includeSymbolsElement.checked) {
-        password += includeSymbols();
-    }
+    // if (includeSymbolsElement.checked) {
+    //     password += includeSymbols();
+    // }
 
-    for (let i = password.length; i < characterAmount; i++) {
-        const x = generatePassword();
-        password += x;
-    }
+    // for (let i = password.length; i < characterAmount; i++) {
+    //     const x = generatePassword();
+    //     password += x;
+    // }
     passwordDisplay.innerText = password;
 })
 
