@@ -12,7 +12,12 @@ generateBtn.addEventListener("click", writePassword);
 // 3. generate the password
 // ! 4. display password to the page
 
-
+const characterAmountRange = document.getElementById('characterAmountRange')
+const characterAmountNumber = document.getElementById('characterAmountNumber')
+const includeUppercase = document.getElementById('includeUppercase')
+const includeNumbers = document.getElementById('includeNumbers')
+const includeSymbols = document.getElementById('includeSymbols')
+const includeLowercase = document.getElementById('includeLowercase')
 
 
   //  return "Generated Password will go here!"
@@ -68,26 +73,32 @@ const generatePassword = (length, hasNumbers, hasSymbols, hasLowercase, hasUpper
         return symbols[Math.floor(Math.random() * symbols.length)];
       }
     
+    //! these prompts have no effect on the generated password.
+//      if (confirm('Include capital letters?')) {
+//          characterCodes.push(includeUppercase)
+//        } else {
+//         return
+//        }
     
-    // if (confirm('Include capital letters?')) {
-    //     characterCodes.push(uppercaseLetters)
-    //   }
-    
-    //   if (confirm('Include lowercase letters?')) {
-    //     characterCodes.push(lowercaseLetters)
-    //   }
+//    if (confirm('Include lowercase letters?')) {
+//          characterCodes.push(includeLowercase)
+//        } else {
+//         return
+//        }
       
-    //   if (confirm('Include numbers?')) {
-    //     characterCodes.push(numbers)
-    //   }
+//         if (confirm('Include numbers?')) {
+//          characterCodes.push(includeNumbers)
+//        } else {
+//         return
+//        }
      
-    //   if (confirm('Include symbols?')) {
-    //     characterCodes.push(symbols)
-    //     {
-            // password.textContent = newPassword;
-             password.textContent = password;
-    //     }
-    //   };
+//       if (confirm('Include symbols?')) {
+//          characterCodes.push(includeSymbols)
+//          {
+//              password.textContent = newPassword;
+//              password.textContent = password;
+//          }
+//        };
         //! newPassword undefined...
         //! how do i collect the resluts from the functions
         //  todo make a prompt for selecting length. not sure how to set that up. it wont be a if(confirm('how many characters)) {
@@ -103,9 +114,15 @@ const generatePassword = (length, hasNumbers, hasSymbols, hasLowercase, hasUpper
     return password;
     // ! What am i doing wrong here...
 }
+
+
 // the 10 value will need to be optional
 // console.log(generatePassword(10, true, true, true));
-//writePassword();
+var writePassword = function() {
+    console.log(generatePassword())
+};
+writePassword();
+//not even getting console.log to read password ^ up there
 generatePassword(10, true, false, true);
 
 

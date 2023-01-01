@@ -1,6 +1,7 @@
 const characterAmountRange = document.getElementById('characterAmountRange')
 const characterAmountNumber = document.getElementById('characterAmountNumber')
 const includeUppercaseElement = document.getElementById('includeUppercase')
+const includeLowercaseElement = document.getElementById('includeLowercase')
 const includeNumbersElement = document.getElementById('includeNumbers')
 const includeSymbolsElement = document.getElementById('includeSymbols')
 
@@ -28,10 +29,11 @@ form.addEventListener('submit', e => {
     e.preventDefault()
     const characterAmount = characterAmountNumber.value
     const includeUppercase = includeUppercaseElement.checked == true
+    // const includeLowercase = includeLowercaseElement.checked == true
     const includeNumbers = includeNumbersElement.checked == true
     const includeSymbols = includeSymbolsElement.checked == true
-    const password = generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols)
-   
+    const password = generatePassword(characterAmount, includeUppercase,  includeNumbers, includeSymbols)
+//    includeLowercase,
 
     //let password = "";
 
@@ -60,7 +62,7 @@ function generatePassword(characterAmount, includeUppercase, includeNumbers, inc
     if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
     if (includeSymbols) charCodes = charCodes.concat(SYMBOLS_CHAR_CODES)
     if (includeNumbers) charCodes = charCodes.concat(NUMBERS_CHAR_CODES)
-
+    // if (includeLowercase) charCodes = charCodes.concat(LOWERCASE_CHAR_CODES)
     const passwordCharacters = []
     for (let i = 0; i < characterAmount; i++) {
         const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
