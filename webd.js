@@ -86,3 +86,4 @@ function syncCharacterAmount(e) {
 }
 
 console.log(generatePassword(''));
+
