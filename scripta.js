@@ -14,7 +14,7 @@ function generatePassword() {
     var passwordLength = prompt('WHat is the length of your password')
     console.log(passwordLength);
     if (passwordLength < 8 || passwordLength > 128) {
-        alert('write something')
+        alert('must be in the realm of 8-128')
         return null
     }
     // ask the user the character types uppercase, lowercase, symbols, numbers?
